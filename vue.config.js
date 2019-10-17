@@ -17,10 +17,10 @@ module.exports = {
   },
   pwa: {
     name: 'Vue Black Dashboard',
-    themeColor: '#344675',
-    msTileColor: '#344675',
+    themeColor: '#ffffff',
+    msTileColor: '#ffffff',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: '#344675'
+    appleMobileWebAppStatusBarStyle: '#ffffff'
   },
   pluginOptions: {
     i18n: {

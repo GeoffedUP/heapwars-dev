@@ -164,7 +164,7 @@ function formatAmount(amount, maxDigits = 6)  {
 
 
 export default {
-  name: 'Template',
+  name: 'Heap',
 
 
 data: function() {

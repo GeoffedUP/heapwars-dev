@@ -3,15 +3,15 @@
     <side-bar>
       <template slot="links">
         <sidebar-link to="/dashboard" :name="$t('sidebar.dashboard')" icon="tim-icons icon-chart-pie-36"/>
-        <sidebar-link to="/typography" :name="$t('sidebar.typography')" icon="tim-icons icon-align-center"/>
-        <sidebar-link to="/table-list" :name="$t('sidebar.tableList')" icon="tim-icons icon-puzzle-10"/>
-        <sidebar-link to="/notifications" :name="$t('sidebar.notifications')" icon="tim-icons icon-bell-55"/>
-        <sidebar-link to="/icons" :name="$t('sidebar.icons')" icon="tim-icons icon-atom"/>
-        <sidebar-link to="/template" :name="$t('sidebar.template')" icon="tim-icons icon-pin"/>
+        <sidebar-link to="/winners" :name="$t('sidebar.winners')" icon="tim-icons icon-align-center"/>
+        <sidebar-link to="/heap" :name="$t('sidebar.heap')" icon="tim-icons icon-puzzle-10"/>
+        <sidebar-link to="/awesomeshuf" :name="$t('sidebar.awesomeshuf')" icon="tim-icons icon-atom"/>
+
 
         
        <!--         
-        
+        <sidebar-link to="/notifications" :name="$t('sidebar.notifications')" icon="tim-icons icon-bell-55"/>
+        <sidebar-link to="/template" :name="$t('sidebar.template')" icon="tim-icons icon-pin"/>
         <sidebar-link to="/dashboard?enableRTL=true" :name="$t('sidebar.rtlSupport')" icon="tim-icons icon-world"/>  
         -->
       </template>

@@ -4,12 +4,12 @@ import NotFound from "@/pages/NotFoundPage.vue";
 
 // Admin pages
 const Dashboard = () => import(/* webpackChunkName: "dashboard" */ "@/pages/Dashboard.vue");
+const Winners = () => import(/* webpackChunkName: "common" */ "@/pages/Winners.vue");
+const Heap = () => import(/* webpackChunkName: "common" */ "@/pages/Heap.vue");
+const Awesomeshuf = () => import(/* webpackChunkName: "common" */ "@/pages/Awesomeshuf.vue");
 // const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
-const Notifications = () => import(/* webpackChunkName: "common" */"@/pages/Notifications.vue");
-const Icons = () => import(/* webpackChunkName: "common" */ "@/pages/Icons.vue");
-const Template = () => import(/* webpackChunkName: "common" */ "@/pages/Template.vue");
-const Typography = () => import(/* webpackChunkName: "common" */ "@/pages/Typography.vue");
-const TableList = () => import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
+// const Notifications = () => import(/* webpackChunkName: "common" */"@/pages/Notifications.vue");
+// const Template = () => import(/* webpackChunkName: "common" */ "@/pages/Template.vue");
 
 const routes = [
   {
@@ -22,36 +22,36 @@ const routes = [
         name: "dashboard",
         component: Dashboard
       },
+      {
+        path: "winners",
+        name: "winners",
+        component: Winners
+      },
+      {
+        path: "heap",
+        name: "heap",
+        component: Heap
+      },
+      {
+        path: "awesomeshuf",
+        name: "awesomeshuf",
+        component: Awesomeshuf
+      }
       // {
       //   path: "profile",
       //   name: "profile",
       //   component: Profile
       // },
-      {
-        path: "notifications",
-        name: "notifications",
-        component: Notifications
-      },
-      {
-        path: "icons",
-        name: "icons",
-        component: Icons
-      },
-      {
-        path: "template",
-        name: "template",
-        component: Template
-      },
-      {
-        path: "typography",
-        name: "typography",
-        component: Typography
-      },
-      {
-        path: "table-list",
-        name: "table-list",
-        component: TableList
-      }
+      // {
+      //   path: "notifications",
+      //   name: "notifications",
+      //   component: Notifications
+      // },
+      // {
+      //   path: "icons",
+      //   name: "icons",
+      //   component: Icons
+      // },
     ]
   },
   { path: "*", component: NotFound },

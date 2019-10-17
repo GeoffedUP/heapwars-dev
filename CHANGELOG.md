@@ -1,20 +1,17 @@
 # Change Log
 
-## [1.1.0] 2019-02-12
-- Package updates
-- Add pwa support
-- Improve accessibility
-- Cleanups & other minor UI improvements
-- Improve bundle size
+## [1.1.0]
+- Added shuf tracker
 
-## [1.0.1] 2018-12-03
+## [1.2.0]
 ### Minor updates
-- Upgrade packages
-- Change sidebar gradient colors (more pleasant)
-- Make links "bolder" in the sidebar so they are more readable
-- Improve bundle size, add vue-router prefetch
-- Add pwa support
+- Changed from webpack
+- Added bootstrap-vuejs
+- Added Updated look
+- Added more stats
 
-
-## [1.0.0] 2018-10-14
-### Stable Original Release
+## [2.0.0]
+### Stable Release
+- Overhaul design
+- Added heap list
+- Added more links

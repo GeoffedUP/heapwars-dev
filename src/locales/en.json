@@ -111,16 +111,16 @@
     ]
   },
   "sidebar": {
-    "title": "Creative Tim",
-    "shortTitle": "CT",
-    "dashboard": "dashboard",
-    "icons": "Icons",
+    "title": "HeapWars.com",
+    "shortTitle": "SHUF",
+    "dashboard": "Shuffle Dashboard",
+    "winners": "Winners",
+    "heap": "Heap",
+    "awesomeshuf": "Awesome SHUF",
     "maps": "Maps",
     "notifications": "Notifications",
     "userProfile": "User Profile",
-    "tableList": "Table List",
     "template": "Blank Template",
-    "typography": "Typography",
     "rtlSupport": "RTL Support"
   }
 }

@@ -1,21 +1,78 @@
 <template>
   <div>
 
-    <div class="row">
-      <div class="col-12">
-        <card type="chart">
-<div class="wrapper">
+
+
 
     <div class="w3-row" style="padding-top:22px; padding-bottom:1px;">
-      <h2><b><i class="fa fa-dashboard"></i> Shuffle Dashboard</b></h2>
+      <h2 align="center"><b><i class="fa fa-dashboard"></i> Shuffle Dashboard</b></h2>
     </div>
 
 
 
-    <div class="top-2 w3-row-padding h3-hoverable">
 
-      <div class="w3-fith w3-margin-bottom">
+
+        <div class="row">
+        
+<div class="col-lg-4" :class="{'text-right': isRTL}">
+      <div class="top-2 w3-margin-bottom">
+      <div class="w3-hover-shadow w3-card-2">
+        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
+          <h4>My Heap Spots</h4>
+          <div id="mySpots">
+            <div id="addy"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+<div class="col-lg-4" :class="{'text-right': isRTL}">
+                  <div class="w3-margin-bottom">
+                  <div class="w3-hover-shadow w3-card-2">
+        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
+          <h4>Track your Shuffle Monster Tokens</h4>
+          <p align="center">
+            <font size="2px" Style="font-weight: 50;">paste your wallet addresses below</font>
+            <font size="2" style="color: #a8a8a8a4; font-weight: 50;"> <br><i>input one address per line</i></font><br>
+            <textarea id="myTextarea" placeholder="0x69696562885eB3C9a609f957efd150DF93BA8c2e
+0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E
+0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
+0x1Db3439a222C519ab44bb1144fC28167b4Fa6EE6
+0x4Cdc86fa95Ec2704f0849825f1F8b077deeD8d39" style="height: 125px">
+</textarea>
+          </p>
+          <p>
+          <input type="submit" value="Get Heap Results" class="btn btn-success" onclick="myFunction()" />
+          </p>
+        </div>
+        </div>
+        </div>
+</div>
+
+<div class="col-lg-4" :class="{'text-right': isRTL}">
+     <div class="w3-margin-bottom">
+     <div class="w3-hover-shadow w3-card-2">
+        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
+          <h4>My Address Balances</h4>
+          <div id="myBalances"></div>
+          <div id="addy2"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <div class="row">
+
+<div class="col-lg-4" :class="{'text-right': isRTL}">
+      <div class="w3-margin-bottom">
       <div class="w3-hover-shadow">
+
+
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
           
@@ -329,10 +386,15 @@ l-28 137 -1 -262z"/>
           <div class="w3-clear"></div>
           <h3><span id="holdersCount">loading...</span></h3>
         </div>
+
+
         </div>
       </div>
+      </div>
 
-      <div class="w3-fith w3-margin-bottom">
+
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+      <div class="w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -375,11 +437,6 @@ c96 420 287 965 487 1391 l55 118 -52 87 c-334 551 -721 1005 -1131 1323 -310
 <path d="M2110 385 l0 -285 2730 0 2730 0 0 285 0 285 -2730 0 -2730 0 0 -285z"/>
 </g>
 </svg>
-
-
-          
-          
-          
           </div>
           <div class="w3-right">
             <h6>Supply</h6>
@@ -389,9 +446,13 @@ c96 420 287 965 487 1391 l55 118 -52 87 c-334 551 -721 1005 -1131 1323 -310
         </div>
         </div>
       </div>
+      </div>
 
 
-      <div class="w3-fith w3-margin-bottom">
+
+
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+      <div class="w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -434,9 +495,19 @@ c96 420 287 965 487 1391 l55 118 -52 87 c-334 551 -721 1005 -1131 1323 -310
         </div>
         </div>
       </div>
+      </div>
 
 
-      <div class="w3-fith w3-margin-bottom">
+
+
+    </div>
+
+
+        <div class="row">
+
+
+      <div class="col-lg-6" :class="{'text-right': isRTL}">
+      <div class="w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -662,8 +733,13 @@ l0 -310 -110 0 -110 0 0 310 0 310 110 0 110 0 0 -310z m-350 -735 l0 -135 95
         </div>
         </div>
       </div>
+      </div>
 
-      <div class="w3-fith w3-margin-bottom">
+
+
+
+      <div class="col-lg-6" :class="{'text-right': isRTL}">
+      <div class="w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -893,63 +969,18 @@ m1397 -200 c-17 -24 -69 -156 -69 -175 0 -14 25 2 57 37 51 56 109 94 173 113
         </div>
         </div>
       </div>
+      </div>
+
+
+
+
     </div>
 
 
-        <div class="w3-row-padding">
-        
 
-      <div class="top-2 w3-third w3-margin-bottom">
-      <div class="w3-hover-shadow w3-card-6">
-        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
-          <h4>My Heap Spots</h4>
-          <div id="mySpots">
-            <div id="addy"></div>
-          </div>
-        </div>
-      </div>
-      </div>
-
-                  <div class="top-1 w3-third w3-margin-bottom">
-                  <div class="w3-hover-shadow w3-card-6">
-        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
-          <h4>Track your Shuffle Monster Tokens</h4>
-          <p align="center">
-            <font size="2px" Style="font-weight: 50;">paste your wallet addresses below</font>
-            <font size="2" style="color: #a8a8a8a4; font-weight: 50;"> <br><i>input one address per line</i></font>
-            <textarea id="myTextarea" placeholder="0x69696562885eB3C9a609f957efd150DF93BA8c2e
-0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E
-0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
-0x1Db3439a222C519ab44bb1144fC28167b4Fa6EE6
-0x4Cdc86fa95Ec2704f0849825f1F8b077deeD8d39" style="height: 125px">
-</textarea>
-          </p>
-          <p>
-          <input type="submit" value="Get Heap Results" class="btn btn-success" onclick="myFunction()" />
-          </p>
-        </div>
-        </div>
-        </div>
-
-
-     <div class="top-3 w3-third w3-margin-bottom">
-     <div class="w3-hover-shadow w3-card-6">
-        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
-          <h4>My Address Balances</h4>
-          <div id="myBalances"></div>
-          <div id="addy2"></div>
-        </div>
-        </div>
-      </div>
-    </div>
-    
-        </div>
-  
-        </card>
-      </div>
-    </div>
     <div class="row">
       <div class="col-lg-4" :class="{'text-right': isRTL}">
+      <div class="w3-hover-shadow">
         <card type="chart">
           <template slot="header">
            <!--  
@@ -971,6 +1002,7 @@ m1397 -200 c-17 -24 -69 -156 -69 -175 0 -14 25 2 57 37 51 56 109 94 173 113
           </div>
            -->
         </card>
+      </div>
       </div>
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
@@ -1015,6 +1047,8 @@ m1397 -200 c-17 -24 -69 -156 -69 -175 0 -14 25 2 57 37 51 56 109 94 173 113
         </card>
       </div>
     </div>
+
+
     <div class="row">
 
       <div class="col-lg-6 col-md-12">
