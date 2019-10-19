@@ -1,9 +1,8 @@
 * Fork the repository
 * Clone it on your PC
-* `npm install` or `yarn install`
-* Make changes, commit open PR
+* `npm install`
+* Make changes, commit and open a Pull Request
 
 ### Notes
 * Please don't use jQuery or jQuery based plugins since there are many pure Vue alternatives
-
-This project uses [vue-cli 3](https://github.com/vuejs/vue-cli).
+* Write unit tests for your custom components. See fgInput.spec and paper-table.spec

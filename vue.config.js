@@ -1,4 +1,9 @@
+const path = require('path');
 const webpack = require('webpack');
+
+function resolveSrc(_path) {
+  return path.join(__dirname, _path);
+}
 
 module.exports = {
   lintOnSave: false,
@@ -6,6 +11,7 @@ module.exports = {
     // Set up all the aliases we use in our app.
     resolve: {
       alias: {
+        src: resolveSrc('src'),
         'chart.js': 'chart.js/dist/Chart.js'
       }
     },
@@ -16,19 +22,11 @@ module.exports = {
     ]
   },
   pwa: {
-    name: 'Vue Black Dashboard',
-    themeColor: '#ffffff',
-    msTileColor: '#ffffff',
+    name: 'Vue Light Bootstrap Dashboard',
+    themeColor: '#344675',
+    msTileColor: '#344675',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: '#ffffff'
-  },
-  pluginOptions: {
-    i18n: {
-      locale: 'en',
-      fallbackLocale: 'en',
-      localeDir: 'locales',
-      enableInSFC: false
-    }
+    appleMobileWebAppStatusBarStyle: '#344675'
   },
   css: {
     // Enable CSS source maps.

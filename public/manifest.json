@@ -1,6 +1,6 @@
 {
-  "name": "vue-black-dashboard",
-  "short_name": "vue-black-dashboard",
+  "name": "vue-light-bootstrap-dashboard",
+  "short_name": "vue-light-bootstrap-dashboard",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

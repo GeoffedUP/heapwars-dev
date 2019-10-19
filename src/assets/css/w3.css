@@ -240,7 +240,8 @@ h2 {
 }
 
 h3 {
-    font-size: 27px
+    font-size: 27px;
+    color: #ffffff;
 }
 
 h4 {
@@ -647,7 +648,7 @@ a {
 .w3-quarter,
 .w3-fith {
     float: left;
-    width: 100%
+    align: center;
 }
 
 .w3-col.s1 {
@@ -713,7 +714,8 @@ a {
 
     .w3-col.m2,
     .w3-fith {
-        width: 20%
+        width: 20%;
+padding: 10px;
     }
 
     .w3-col.m3,
@@ -947,13 +949,13 @@ a {
 .w3-top,
 .w3-stick,
 .w3-bottom {
-    position: fixed;
-    width: 100%;
-    z-index: 1
+    position: fixed !important;
+    z-index: 1;
+
 }
 
 .w3-top {
-    top: 0
+    top: 100;
 }
 
 .w3-bottom {
@@ -1540,18 +1542,19 @@ a {
 }
 
 .w3-green {
-    background-color: #002e07;
+    background-color: #001d10;
     height: 100%;
 }
 
 .w3-green:hover h6 {
-    color: #051800 !important;
+    color: #c6e2cd !important;
     background-color: transparent,  !important;
 
 }
 
 .w3-green:hover h3 {
-    color: #fffb00 !important;
+    color: #eeff00 !important;
+    weight: 800px;
     background-color: transparent,  !important;
 
 }
@@ -1566,6 +1569,9 @@ a {
     width: auto;
     display: inline;
 }
+.w3-green:hover svg {
+    color: #d6f0d9;
+}
 
 
 
@@ -1574,15 +1580,16 @@ a {
     fill: currentcolor;
 }
 
-.w3-green2 svg {
-    height: 45px;
-    width: auto;
-    display: inline;
+.w3-green2 svg:hover {
+    color: #c6e2cd;
+    weight: bold;
+    fill: #c6e2cd;
 }
 
-.w3-green2 svg path {
+.w3-green2 svg:hover path {
+    color: #c6e2cd;
     weight: bold;
-    fill: currentcolor;
+    fill: #c6e2cd;
 }
 
 .w3-green2 th {
@@ -1602,7 +1609,7 @@ a {
 
 
 .w3-hover-green:hover {
-    color: #051800 !important;
+    color: #001d10 !important;
     background-color: #8b290b !important;
 
 }

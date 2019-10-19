@@ -1,78 +1,12 @@
 <template>
-  <div>
+  <div class="content">
+  
+    <div class="container-fluid">
+      <div class="row">
+      
 
-
-
-
-    <div class="w3-row" style="padding-top:22px; padding-bottom:1px;">
-      <h2 align="center"><b><i class="fa fa-dashboard"></i> Shuffle Dashboard</b></h2>
-    </div>
-
-
-
-
-
-        <div class="row">
-        
-<div class="col-lg-4" :class="{'text-right': isRTL}">
-      <div class="top-2 w3-margin-bottom">
-      <div class="w3-hover-shadow w3-card-2">
-        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
-          <h4>My Heap Spots</h4>
-          <div id="mySpots">
-            <div id="addy"></div>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-
-<div class="col-lg-4" :class="{'text-right': isRTL}">
-                  <div class="w3-margin-bottom">
-                  <div class="w3-hover-shadow w3-card-2">
-        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
-          <h4>Track your Shuffle Monster Tokens</h4>
-          <p align="center">
-            <font size="2px" Style="font-weight: 50;">paste your wallet addresses below</font>
-            <font size="2" style="color: #a8a8a8a4; font-weight: 50;"> <br><i>input one address per line</i></font><br>
-            <textarea id="myTextarea" placeholder="0x69696562885eB3C9a609f957efd150DF93BA8c2e
-0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E
-0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B
-0x1Db3439a222C519ab44bb1144fC28167b4Fa6EE6
-0x4Cdc86fa95Ec2704f0849825f1F8b077deeD8d39" style="height: 125px">
-</textarea>
-          </p>
-          <p>
-          <input type="submit" value="Get Heap Results" class="btn btn-success" onclick="myFunction()" />
-          </p>
-        </div>
-        </div>
-        </div>
-</div>
-
-<div class="col-lg-4" :class="{'text-right': isRTL}">
-     <div class="w3-margin-bottom">
-     <div class="w3-hover-shadow w3-card-2">
-        <div style="min-height: 330px; height: 100%;" class="w3-container w3-card-4 w3-green w3-round w3-padding-16">
-          <h4>My Address Balances</h4>
-          <div id="myBalances"></div>
-          <div id="addy2"></div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-    <div class="row">
-
-<div class="col-lg-4" :class="{'text-right': isRTL}">
-      <div class="w3-margin-bottom">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 w3-margin-bottom">
       <div class="w3-hover-shadow">
-
-
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
           
@@ -386,15 +320,10 @@ l-28 137 -1 -262z"/>
           <div class="w3-clear"></div>
           <h3><span id="holdersCount">loading...</span></h3>
         </div>
-
-
         </div>
-      </div>
-      </div>
+        </div>
 
-
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-      <div class="w3-margin-bottom">
+         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -437,6 +366,11 @@ c96 420 287 965 487 1391 l55 118 -52 87 c-334 551 -721 1005 -1131 1323 -310
 <path d="M2110 385 l0 -285 2730 0 2730 0 0 285 0 285 -2730 0 -2730 0 0 -285z"/>
 </g>
 </svg>
+
+
+          
+          
+          
           </div>
           <div class="w3-right">
             <h6>Supply</h6>
@@ -445,14 +379,9 @@ c96 420 287 965 487 1391 l55 118 -52 87 c-334 551 -721 1005 -1131 1323 -310
           <h3><span id="circulatingSupplyReadable">loading...</span>&nbsp;/&nbsp;<font size="4" id="initialSupply"></font></h3>
         </div>
         </div>
-      </div>
-      </div>
+        </div>
 
-
-
-
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-      <div class="w3-margin-bottom">
+       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -494,20 +423,53 @@ c96 420 287 965 487 1391 l55 118 -52 87 c-334 551 -721 1005 -1131 1323 -310
           <h3><span id="tokensBurned">loading...</span> &nbsp;<font size="4">SHUF</font>&nbsp;&nbsp;</h3>
         </div>
         </div>
-      </div>
-      </div>
+        </div>
 
+               <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 w3-margin-bottom">
+      <div class="w3-hover-shadow">
+        <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
+          <div class="w3-left">
+            
+            
 
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M312.47,369.975c-10.807,7.864-21.116,8.395-27.276,7.709c-15.68-1.753-29.748-13.574-37.631-31.62
+			c-5.29-12.109-8.104-28.372-4.929-45.535c-24.917,13.338-56.887,43.622-56.887,111.224c0,38.738,31.515,70.252,70.252,70.252
+			s70.252-31.515,70.252-70.252C326.252,396.618,321.339,381.977,312.47,369.975z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M465.097,290.749l-2.262-40.346l-24.63,32.035c-1.961,2.55-6.137,7.061-11.466,11.173
+			c2.106-6.978,3.987-14.937,5.23-23.715c4.302-30.4,1.623-77.058-35.558-126.701l-15.601-20.83l-10.222,23.932
+			c-11.792,27.606-30.871,41.455-48.603,35.283c-13.651-4.75-24.746-20.373-30.439-42.866c-5.31-20.979-8.396-57.897,7.065-114.636
+			L305.169,0l-24.345,5.484c-82.12,18.5-137.457,76.817-160.03,168.647c-9.489,38.602-11.276,75.173-11.01,99.908
+			c-19.404-15.687-29.093-29.451-29.346-29.815L61.955,217.07l-8.419,31.794c-4.627,17.475-6.972,35.553-6.972,53.732
+			c0,114.62,92.556,208.012,206.852,209.404c-54.105-1.375-97.695-45.816-97.695-100.247c0-70.168,30.144-107.552,55.432-126.557
+			c27.593-20.738,55.42-24.423,56.591-24.57l34.73-4.352l-20.784,28.164c-13.097,17.747-12.001,37.262-6.609,49.607
+			c3.901,8.929,9.567,13.364,13.45,13.798c4.897,0.557,9.823-5.063,12.321-8.455l9.809-13.326l12.313,11.054
+			c21.165,19.004,33.305,46.209,33.305,74.637c0,54.43-43.59,98.871-97.695,100.247c114.296-1.391,206.852-94.784,206.852-209.404
+			C465.437,298.762,465.323,294.775,465.097,290.749z"/>
+	</g>
+</g>
+</svg>
 
+  
+          
+          
+          </div>
+          <div class="w3-right">
+            <h6>Burned</h6>
+          </div>
+          <div class="w3-clear"></div>
+          <h3><span id="tokensBurned">loading...</span> &nbsp;<font size="4">SHUF</font>&nbsp;&nbsp;</h3>
+        </div>
+        </div>
+        </div>
 
-    </div>
-
-
-        <div class="row">
-
-
-      <div class="col-lg-6" :class="{'text-right': isRTL}">
-      <div class="w3-margin-bottom">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -732,14 +694,9 @@ l0 -310 -110 0 -110 0 0 310 0 310 110 0 110 0 0 -310z m-350 -735 l0 -135 95
           <h3><span id="heapTopAmountReadable">loading...</span> &nbsp;<font size="4">SHUF</font>&nbsp;&nbsp;</h3>
         </div>
         </div>
-      </div>
-      </div>
-
-
-
-
-      <div class="col-lg-6" :class="{'text-right': isRTL}">
-      <div class="w3-margin-bottom">
+        </div>
+        
+<div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 w3-margin-bottom">
       <div class="w3-hover-shadow">
         <div class="w3-container w3-card-4 w3-green w3-hover-green w3-round w3-padding-16">
           <div class="w3-left">
@@ -968,432 +925,229 @@ m1397 -200 c-17 -24 -69 -156 -69 -175 0 -14 25 2 57 37 51 56 109 94 173 113
           <h3><span id="heapSize">loading...</span> &nbsp;/&nbsp;512&nbsp;</h3>
         </div>
         </div>
+        </div>
+
       </div>
-      </div>
 
 
+      
+      <div class="row">
+        <div class="col-md-8">
 
-
-    </div>
-
-
-
-    <div class="row">
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-      <div class="w3-hover-shadow">
-        <card type="chart">
-          <template slot="header">
-           <!--  
-            <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
-             -->
-              <h5 class="card-category">Card Title #1</h5>
-            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i>1,000,000</h3>
+            <template slot="header">
+              <h4 class="card-title">Users Behavior</h4>
+              <p class="card-category">24 Hours performance</p>
             </template>
-           <!-- 
-         
-          <div class="chart-area">
-            <line-chart style="height: 100%"
-                        chart-id="purple-line-chart"
-                        :chart-data="purpleLineChart.chartData"
-                        :gradient-colors="purpleLineChart.gradientColors"
-                        :gradient-stops="purpleLineChart.gradientStops"
-                        :extra-options="purpleLineChart.extraOptions">
-            </line-chart>
-          </div>
-           -->
-        </card>
-      </div>
-      </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
-          <template slot="header">
-          <!--  
-            <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
-            -->
-            <h5 class="card-category">Card Title #2</h5>
-            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i>3,500€</h3>
-          </template>
-          <!--  
-          <div class="chart-area">
-            <bar-chart style="height: 100%"
-                       chart-id="blue-bar-chart"
-                       :chart-data="blueBarChart.chartData"
-                       :gradient-stops="blueBarChart.gradientStops"
-                       :extra-options="blueBarChart.extraOptions">
-            </bar-chart>
-          </div>
-          -->
-        </card>
-      </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
-          <template slot="header">
-           <!-- 
-            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>
-            -->
-            <h5 class="card-category">Card Title #3</h5>
-            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
-          </template>
-           <!-- 
-          <div class="chart-area">
-            <line-chart style="height: 100%"
-                        chart-id="green-line-chart"
-                        :chart-data="greenLineChart.chartData"
-                        :gradient-stops="greenLineChart.gradientStops"
-                        :extra-options="greenLineChart.extraOptions">
-            </line-chart>
-          </div>
-          -->
-        </card>
-      </div>
-    </div>
+            <template slot="footer">
+              <div class="legend">
+                <i class="fa fa-circle text-info"></i> Open
+                <i class="fa fa-circle text-danger"></i> Click
+                <i class="fa fa-circle text-warning"></i> Click Second Time
+              </div>
+              <hr>
+              <div class="stats">
+                <i class="fa fa-history"></i> Updated 3 minutes ago
+              </div>
+            </template>
 
+        </div>
 
-    <div class="row">
+        <div class="col-md-4">
 
-      <div class="col-lg-6 col-md-12">
-        <card type="tasks" :header-classes="{'text-right': isRTL}">
-          <template slot="header">
-            <h6 class="title d-inline">
-            <!--{{$t('dashboard.tasks', {count: 5})}}-->
-            Card Title {{$t('dashboard.tasks', {count: 5})}}
-            </h6>
-            <p class="card-category d-inline">
-            <!--{{{$t('dashboard.today')}}-->
-            small Title 1/2
-            </p>
-            <base-dropdown menu-on-right=""
-                           tag="div"
-                           title-classes="btn btn-link btn-icon"
-                           aria-label="Settings menu"
-                           :class="{'float-left': isRTL}">
-              <i slot="title" class="tim-icons icon-settings-gear-63"></i>
-              <a class="dropdown-item" href="#">
-              #1
-              <!--{{$t('dashboard.dropdown.action')}}-->
-              </a>
-              <a class="dropdown-item" href="#">
-              #2
-              <!--{{$t('dashboard.dropdown.anotherAction')}}-->
-              </a>
-              <a class="dropdown-item" href="#">
-              #3
-              <!--{{$t('dashboard.dropdown.somethingElse')}}-->
-              </a>
-            </base-dropdown>
-          </template>
-          <!-- 
-          <div class="table-full-width">
-            <task-list></task-list>
-          </div>
-          -->
-        </card>
+            <template slot="header">
+              <h4 class="card-title">Email Statistics</h4>
+              <p class="card-category">Last Campaign Performance</p>
+            </template>
+            <template slot="footer">
+              <div class="legend">
+                <i class="fa fa-circle text-info"></i> Open
+                <i class="fa fa-circle text-danger"></i> Bounce
+                <i class="fa fa-circle text-warning"></i> Unsubscribe
+              </div>
+              <hr>
+              <div class="stats">
+                <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+              </div>
+            </template>
+
+        </div>
       </div>
 
+      <div class="row">
+        <div class="col-md-6">
+          <chart-card
+            :chart-data="barChart.data"
+            :chart-options="barChart.options"
+            :chart-responsive-options="barChart.responsiveOptions"
+            chart-type="Bar">
+            <template slot="header">
+              <h4 class="card-title">Chart Header</h4>
+              <p class="card-category">Chart Data</p>
+            </template>
+            <template slot="footer">
+              <div class="legend">
+                <i class="fa fa-circle text-info"></i> Data1
+                <i class="fa fa-circle text-danger"></i> Data2
+              </div>
+              <hr>
+              <div class="stats">
+                <i class="fa fa-check"></i> Data information certified
+              </div>
+            </template>
+          </chart-card>
+        </div>
 
+        <div class="col-md-6">
+          <card>
+            <template slot="header">
+              <h5 class="title">Checklist Data</h5>
+              <p class="category">DATA</p>
+            </template>
+            <l-table :data="tableData.data"
+                     :columns="tableData.columns">
+              <template slot="columns"></template>
 
-      <div class="col-lg-6 col-md-12">
-        <card type="tasks" :header-classes="{'text-right': isRTL}">
-          <template slot="header">
-            <h6 class="title d-inline">
-            <!--{{$t('dashboard.tasks', {count: 5})}}-->
-            Card Title {{$t('dashboard.tasks', {count: 5})}}
-            </h6>
-            <p class="card-category d-inline">
-            <!--{{{$t('dashboard.today')}}-->
-            small Title 1/2
-            </p>
-            <base-dropdown menu-on-right=""
-                           tag="div"
-                           title-classes="btn btn-link btn-icon"
-                           aria-label="Settings menu"
-                           :class="{'float-left': isRTL}">
-              <i slot="title" class="tim-icons icon-settings-gear-63"></i>
-              <a class="dropdown-item" href="#">
-              #1
-              <!--{{$t('dashboard.dropdown.action')}}-->
-              </a>
-              <a class="dropdown-item" href="#">
-              #2
-              <!--{{$t('dashboard.dropdown.anotherAction')}}-->
-              </a>
-              <a class="dropdown-item" href="#">
-              #3
-              <!--{{$t('dashboard.dropdown.somethingElse')}}-->
-              </a>
-            </base-dropdown>
-          </template>
-          <!-- 
-          <div class="table-full-width">
-            <task-list></task-list>
-          </div>
-          -->
-        </card>
+              <template slot-scope="{row}">
+                <td>
+                  <base-checkbox v-model="row.checked"></base-checkbox>
+                </td>
+                <td>row Title</td>
+                <td class="td-actions text-right">
+                  <button type="button" class="btn-simple btn btn-xs btn-info" v-tooltip.top-center="editTooltip">
+                    <i class="fa fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn-simple btn btn-xs btn-danger" v-tooltip.top-center="deleteTooltip">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </td>
+              </template>
+            </l-table>
+            <div class="footer">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-history"></i> Date last updated
+              </div>
+            </div>
+          </card>
+
+        </div>
       </div>
-
     </div>
   </div>
 </template>
 <script>
-  import LineChart from '@/components/Charts/LineChart';
-  import BarChart from '@/components/Charts/BarChart';
-  import * as chartConfigs from '@/components/Charts/config';
-  import TaskList from './Dashboard/TaskList';
-  import UserTable from './Dashboard/UserTable';
-  import config from '@/config';
+  import ChartCard from 'src/components/Cards/ChartCard.vue'
+  import StatsCard from 'src/components/Cards/StatsCard.vue'
+  import LTable from 'src/components/Table.vue'
 
   export default {
     components: {
-      LineChart,
-      BarChart,
-      TaskList,
-      UserTable
+      LTable,
+      ChartCard,
+      StatsCard
     },
-    data() {
+    data () {
       return {
-        bigLineChart: {
-          allData: [
-            [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
-            [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
-            [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130]
-          ],
-          activeIndex: 0,
-          chartData: null,
-          extraOptions: chartConfigs.purpleChartOptions,
-          gradientColors: config.colors.primaryGradient,
-          gradientStops: [1, 0.4, 0],
-          categories: []
+        editTooltip: 'Edit Task',
+        deleteTooltip: 'Remove',
+        pieChart: {
+          data: {
+            labels: ['40%', '20%', '40%'],
+            series: [40, 20, 40]
+          }
         },
-        purpleLineChart: {
-          extraOptions: chartConfigs.purpleChartOptions,
-          chartData: {
-            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-            datasets: [{
-              label: "Data",
-              fill: true,
-              borderColor: config.colors.primary,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.primary,
-              pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.primary,
-              pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
-              pointRadius: 4,
-              data: [80, 100, 70, 80, 120, 80],
-            }]
+        lineChart: {
+          data: {
+            labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
+            series: [
+              [287, 385, 490, 492, 554, 586, 698, 695],
+              [67, 152, 143, 240, 287, 335, 435, 437],
+              [23, 113, 67, 108, 190, 239, 307, 308]
+            ]
           },
-          gradientColors: config.colors.primaryGradient,
-          gradientStops: [1, 0.2, 0],
+          options: {
+            low: 0,
+            high: 800,
+            showArea: false,
+            height: '245px',
+            axisX: {
+              showGrid: false
+            },
+            lineSmooth: true,
+            showLine: true,
+            showPoint: true,
+            fullWidth: true,
+            chartPadding: {
+              right: 50
+            }
+          },
+          responsiveOptions: [
+            ['screen and (max-width: 640px)', {
+              axisX: {
+                labelInterpolationFnc (value) {
+                  return value[0]
+                }
+              }
+            }]
+          ]
         },
-        greenLineChart: {
-          extraOptions: chartConfigs.greenChartOptions,
-          chartData: {
-            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
-            datasets: [{
-              label: "My First dataset",
-              fill: true,
-              borderColor: config.colors.danger,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.danger,
-              pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.danger,
-              pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
-              pointRadius: 4,
-              data: [90, 27, 60, 12, 80],
-            }]
+        barChart: {
+          data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            series: [
+              [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
+              [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
+            ]
           },
-          gradientColors: ['rgba(66,134,121,0.15)', 'rgba(66,134,121,0.0)', 'rgba(66,134,121,0)'],
-          gradientStops: [1, 0.4, 0],
+          options: {
+            seriesBarDistance: 10,
+            axisX: {
+              showGrid: false
+            },
+            height: '245px'
+          },
+          responsiveOptions: [
+            ['screen and (max-width: 640px)', {
+              seriesBarDistance: 5,
+              axisX: {
+                labelInterpolationFnc (value) {
+                  return value[0]
+                }
+              }
+            }]
+          ]
         },
-        blueBarChart: {
-          extraOptions: chartConfigs.barChartOptions,
-          chartData: {
-            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
-            datasets: [{
-              label: "Countries",
-              fill: true,
-              borderColor: config.colors.info,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              data: [53, 20, 10, 80, 100, 45],
-            }]
-          },
-          gradientColors: config.colors.primaryGradient,
-          gradientStops: [1, 0.4, 0],
+        tableData: {
+          data: [
+            {title: 'Sign contract for "What are conference organizers afraid of?"', checked: false},
+            {title: 'Lines From Great Russian Literature? Or E-mails From My Boss?', checked: true},
+            {
+              title: 'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
+              checked: true
+            },
+            {title: 'Create 4 Invisible User Experiences you Never Knew About', checked: false},
+            {title: 'Read "Following makes Medium better"', checked: false},
+            {title: 'Unfollow 5 enemies from twitter', checked: false}
+          ]
         }
-      }
-    },
-    computed: {
-      enableRTL() {
-        return this.$route.query.enableRTL;
-      },
-      isRTL() {
-        return this.$rtl.isRTL;
-      },
-      bigLineChartCategories() {
-        return this.$t('dashboard.chartCategories');
-      }
-    },
-    methods: {
-      initBigChart(index) {
-        let chartData = {
-          datasets: [{
-            fill: true,
-            borderColor: config.colors.primary,
-            borderWidth: 2,
-            borderDash: [],
-            borderDashOffset: 0.0,
-            pointBackgroundColor: config.colors.primary,
-            pointBorderColor: 'rgba(255,255,255,0)',
-            pointHoverBackgroundColor: config.colors.primary,
-            pointBorderWidth: 20,
-            pointHoverRadius: 4,
-            pointHoverBorderWidth: 15,
-            pointRadius: 4,
-            data: this.bigLineChart.allData[index]
-          }],
-          labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-        }
-        this.$refs.bigChart.updateGradients(chartData);
-        this.bigLineChart.chartData = chartData;
-        this.bigLineChart.activeIndex = index;
-      }
-    },
-    mounted() {
-      this.i18n = this.$i18n;
-      if (this.enableRTL) {
-        this.i18n.locale = 'ar';
-        this.$rtl.enableRTL();
-      }
-      this.initBigChart(0);
-    },
-    beforeDestroy() {
-      if (this.$rtl.isRTL) {
-        this.i18n.locale = 'en';
-        this.$rtl.disableRTL();
       }
     }
-  };
-
-
- function fetchJson() {
-      var xhr = new XMLHttpRequest();
-      // set a callback for when the json is loaded
-      xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) { // if json loaded successfully
-          var data = JSON.parse(this.responseText);
-          // do stuff with data
-          
-
-
-          document.querySelector("#holdersCount").innerText = data["holdersCount"];
- 
-
-        }
-      };
-      // fetch the json
-      xhr.open("GET", "https://api.ethplorer.io/getTokenInfo/0x3A9FfF453d50D4Ac52A6890647b823379ba36B9E?apiKey=freekey", true);
-      xhr.send();
-    }
-
-
-
-    function fetchJson2() {
-      var xhr = new XMLHttpRequest();
-      // set a callback for when the json is loaded
-      xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) { // if json loaded successfully
-          var data = JSON.parse(this.responseText);
-          // do stuff with data
-
-
-          document.querySelector("#circulatingSupplyReadable").innerText = data["circulatingSupplyReadable"];
-          document.querySelector("#initialSupply").innerText = data["initialSupply"];
-          document.querySelector("#tokensBurned").innerText = data["tokensBurned"];
-          document.querySelector("#heapTopAmountReadable").innerText = data["heapTopAmountReadable"];
-          document.querySelector("#heapSize").innerText = data["heapSize"];
-          
-
-        }
-      };
-      // fetch the json
-      xhr.open("GET", "https://api2.shuffle.monster", true);
-      xhr.send();
-    }
-    window.onload = function () {
-      fetchJson2();
-      fetchJson();
-    };
-
-
+  }
 </script>
+<style>
 
 
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-
-
-/* Hot it works? */
-.container{
-    width: auto;
-}
-.my-auto{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.title{
-    position: static;
-    max-width: 731px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 93.19%;
-    text-align: left;
-    /* or 33px */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
-
+.content {
+color: #e4af00 !important;
 
 }
 
-.description{
-    position: static;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 25px;
-    text-align: left;
-    /* or 18px */
-    align-items: center;
-    color: #000000;
+.w3-margin-bottom {
+padding: 5px;
+
 }
 
-.main{
-    margin-top: 66px;
-    margin-bottom: 66px;
-}
-
-@media screen and (max-width: 767px) {
-    .margin-mobile {
-        /* padding: 25px; */
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-}
 
 
 </style>
-

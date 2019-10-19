@@ -1,32 +1,26 @@
-import BaseInput from "./Inputs/BaseInput.vue";
+import BaseCheckbox from './Inputs/BaseCheckbox.vue'
+import Radio from './Inputs/BaseRadio.vue'
+import BaseInput from './Inputs/BaseInput.vue'
 
-import BaseCheckbox from "./BaseCheckbox.vue";
-import BaseRadio from "./BaseRadio.vue";
-import BaseDropdown from "./BaseDropdown.vue";
-import BaseTable from "./BaseTable.vue";
-import BaseButton from "./BaseButton";
-import BaseAlert from "./BaseAlert";
-import BaseNav from "./BaseNav";
-import Modal from "./Modal";
-import CloseButton from "./CloseButton";
+import BaseDropdown from './BaseDropdown.vue'
+import Table from './Table.vue'
 
-import Card from "./Cards/Card.vue";
-import StatsCard from "./Cards/StatsCard.vue";
+import Card from './Cards/Card.vue'
+import ChartCard from './Cards/ChartCard.vue'
+import StatsCard from './Cards/StatsCard.vue'
 
-import SidebarPlugin from "./SidebarPlugin/index";
+import SidebarPlugin from './SidebarPlugin'
 
-export {
+let components = {
+  BaseCheckbox,
+  Radio,
   BaseInput,
   Card,
-  Modal,
-  CloseButton,
+  ChartCard,
   StatsCard,
-  BaseTable,
-  BaseCheckbox,
-  BaseRadio,
+  Table,
   BaseDropdown,
-  BaseButton,
-  BaseAlert,
-  SidebarPlugin,
-  BaseNav
-};
+  SidebarPlugin
+}
+
+export default components

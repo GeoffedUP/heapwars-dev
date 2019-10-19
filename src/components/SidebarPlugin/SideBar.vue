@@ -1,66 +1,72 @@
 <template>
   <div class="sidebar"
-       :data="backgroundColor">
-    <!--
-            Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black | darkblue"
-            Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
-        -->
-    <!-- -->
-    <div class="sidebar-wrapper" id="style-3">
+       :style="sidebarStyle"
+       :data-color="backgroundColor"
+       :data-image="backgroundImage">
+    <div class="sidebar-wrapper">
       <div class="logo">
-        <a href="./"
-           aria-label="sidebar mini logo"
-           class="simple-text logo-mini">
-          
-            <img width="50" src="https://raw.githubusercontent.com/ShuffleMonster/mediapack/master/Media/spinning-eye-big.gif" />
-        
-        </a>
-        <a href="./" class="simple-text logo-normal">
-          {{title}}
+        <a href="./" class="simple-text logo__container">
+            <div class="logo-img">
+                <img src="img/spinning-eye.gif" alt="">
+            </div>
+          <font size="4px"><b>{{title}}</b></font><font size="2">{{title2}}</font>
         </a>
       </div>
-      <slot>
 
-      </slot>
-      <ul class="nav">
+      <slot name="content"></slot>
+      <ul class="nav nav-main__links">
         <!--By default vue-router adds an active class to each route link. This way the links are colored when clicked-->
-        <slot name="links">
+        <slot>
           <sidebar-link v-for="(link,index) in sidebarLinks"
-                        :key="index"
+                        :key="link.name + index"
                         :to="link.path"
-                        :name="link.name"
-                        :icon="link.icon">
+                        @click="closeNavbar"
+                        :link="link">
+            <i :class="link.icon"></i>
+            <p>{{link.name}}</p>
           </sidebar-link>
         </slot>
       </ul>
+ <!--     <ul class="nav nav-bottom" v-if="$slots['bottom-links']">
+        <slot name="bottom-links"></slot>
+      </ul> -->
     </div>
   </div>
 </template>
 <script>
-  import SidebarLink from "./SidebarLink";
+  import SidebarLink from './SidebarLink.vue'
 
   export default {
+    components: {
+      SidebarLink
+    },
     props: {
       title: {
         type: String,
-        default: "HeapWars.com"
+        default: 'heapwars'
+      },
+      title2: {
+        type: String,
+        default: '.com'
       },
       backgroundColor: {
         type: String,
-        default: "vue"
+        default: 'black',
+        validator: (value) => {
+          let acceptedValues = ['', 'blue', 'azure', 'green', 'orange', 'red', 'purple', 'black']
+          return acceptedValues.indexOf(value) !== -1
+        }
       },
+      // backgroundImage: {
+      //   type: String,
+      //   default: 'img/sidebar4.png'
+      // },
       activeColor: {
         type: String,
-        default: "success",
-        validator: value => {
-          let acceptedValues = [
-            "primary",
-            "info",
-            "success",
-            "warning",
-            "danger"
-          ];
-          return acceptedValues.indexOf(value) !== -1;
+        default: 'success',
+        validator: (value) => {
+          let acceptedValues = ['primary', 'info', 'success', 'warning', 'danger']
+          return acceptedValues.indexOf(value) !== -1
         }
       },
       sidebarLinks: {
@@ -72,63 +78,32 @@
         default: true
       }
     },
-    provide() {
+    provide () {
       return {
-        autoClose: this.autoClose,
-        addLink: this.addLink,
-        removeLink: this.removeLink
-      };
-    },
-    components: {
-      SidebarLink
+        autoClose: this.autoClose
+      }
     },
     computed: {
-      /**
-       * Styles to animate the arrow near the current active sidebar link
-       * @returns {{transform: string}}
-       */
-      arrowMovePx() {
-        return this.linkHeight * this.activeLinkIndex;
-      },
-      shortTitle() {
-        return this.title.split(' ')
-          .map(word => word.charAt(0))
-          .join('').toUpperCase();
-      }
-    },
-    data() {
-      return {
-        linkHeight: 65,
-        activeLinkIndex: 0,
-        windowWidth: 0,
-        isWindows: false,
-        hasAutoHeight: false,
-        links: []
-      };
-    },
-    methods: {
-      findActiveLink() {
-        this.links.forEach((link, index) => {
-          if (link.isActive()) {
-            this.activeLinkIndex = index;
-          }
-        });
-      },
-      addLink(link) {
-        const index = this.$slots.links.indexOf(link.$vnode);
-        this.links.splice(index, 0, link);
-      },
-      removeLink(link) {
-        const index = this.links.indexOf(link);
-        if (index > -1) {
-          this.links.splice(index, 1);
+      sidebarStyle () {
+        return {
+          backgroundImage: `url(${this.backgroundImage})`
         }
       }
-    },
-    mounted() {
-      this.$watch("$route", this.findActiveLink, {
-        immediate: true
-      });
     }
-  };
+  }
+  
+
 </script>
+<style>
+  .sidebar .sidebar-wrapper {
+
+    display: flex;
+    flex-direction: column;
+  }
+ .sidebar .nav-main__links {
+   flex: 1;
+ }
+ .sidebar .sidebar-wrapper .logo .logo__container {
+   padding-left: 10px;
+ }
+</style>

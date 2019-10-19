@@ -10,7 +10,7 @@
 - Added Updated look
 - Added more stats
 
-## [2.0.0]
+## [2.0.0]  << CURRENT VERSION
 ### Stable Release
 - Overhaul design
 - Added heap list
