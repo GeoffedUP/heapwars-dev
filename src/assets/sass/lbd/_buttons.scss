@@ -27,6 +27,8 @@
 
 }
 
+
+
 // Apply the mixin to the buttons
 //.btn-default { @include btn-styles($default-color, $default-states-color); }
 .btn-primary { @include btn-styles($primary-color, $primary-states-color); }
@@ -44,11 +46,7 @@
          color: $default-color;
     }
 
-    &.btn-fill,
-    &.btn-fill:hover,
-    &.btn-fill:focus{
-        color: $default-color;
-    }
+
 
     &.btn-simple:active,
     &.btn-simple.active{
@@ -92,7 +90,7 @@
     @include btn-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $border-radius-small);
 }
 .btn-wd {
-    min-width: 140px;
+    min-width: 175px;
 }
 
 .btn-group.select{
@@ -130,3 +128,5 @@
         color: $social-facebook;
     }
 }
+
+

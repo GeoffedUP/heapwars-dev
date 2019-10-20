@@ -1,16 +1,15 @@
 import DashboardLayout from '../layout/DashboardLayout.vue'
 // GeneralViews
-import NotFound from '../pages/NotFoundPage.vue'
+import NotFound from 'src/pages/NotFoundPage.vue'
 
 // Admin pages
 import Dashboard from 'src/pages/Dashboard.vue'
 import HeapList from 'src/pages/HeapList.vue'
 import LatestWinners from 'src/pages/LatestWinners.vue'
-import Typography from 'src/pages/Typography.vue'
-import Icons from 'src/pages/Icons.vue'
-import Maps from 'src/pages/Maps.vue'
-import Notifications from 'src/pages/Notifications.vue'
-// import Upgrade from 'src/pages/Upgrade.vue'
+import HeapTxns from 'src/pages/HeapTxns.vue'
+import LatestTxns from 'src/pages/LatestTxns.vue'
+import AwesomeSHUF from 'src/pages/AwesomeSHUF.vue'
+// import Notifications from 'src/pages/Notifications.vue'
 
 const routes = [
   {
@@ -18,6 +17,8 @@ const routes = [
     component: DashboardLayout,
     redirect: '/dashboard'
   },
+
+  // Sidebar linkes
   {
     path: '/',
     component: DashboardLayout,
@@ -39,33 +40,52 @@ const routes = [
         component: LatestWinners
       },
       {
-        path: 'typography',
-        name: 'Typography',
-        component: Typography
+        path: 'heap-txns',
+        name: 'Heap Txns',
+        component: HeapTxns
       },
       {
-        path: 'icons',
-        name: 'Icons',
-        component: Icons
+        path: 'latest-txns',
+        name: 'Latest Txns',
+        component: LatestTxns
       },
       {
-        path: 'maps',
-        name: 'Maps',
-        component: Maps
-      },
-      {
-        path: 'notifications',
-        name: 'Notifications',
-        component: Notifications
+        path: 'awesome-shuf',
+        name: 'Awesome SHUF',
+        component: AwesomeSHUF
       }
       // {
-      //   path: 'upgrade',
-      //   name: 'Upgrade to PRO',
-      //   component: Upgrade
+      //   path: 'notifications',
+      //   name: 'Notifications',
+      //   component: Notifications
       // }
     ]
   },
-  { path: '*', component: NotFound }
+
+  // 404 Not Found page
+  {
+    path: '*',
+    name: 'Troll Box',
+    component: NotFound
+  },
+
+
+  {
+    name: 'GitHub',
+    path: '/github',
+    beforeEnter() {                    
+                  window.open("https://www.github.com/geoffedup", 
+                  '_blank');
+              }
+  },
+  {
+    name: 'Donate',
+    path: '/donate',
+    beforeEnter() {                    
+                  window.open("https://etherscan.io/address/0x69696562885eb3c9a609f957efd150df93ba8c2e#tokentxns", 
+                  '_blank');
+              }
+  }
 ]
 
 /**

@@ -36,19 +36,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
         padding: 4px;
         width: 19em;
 
-        &.timepicker-sbs {
-            @media (min-width: $screen-sm-min) {
-                width: 38em;
-            }
 
-            @media (min-width: $screen-md-min) {
-                width: 38em;
-            }
-
-            @media (min-width: $screen-lg-min) {
-                width: 38em;
-            }
-        }
 
         &.bottom {
 
@@ -297,7 +285,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                 color: $dark-gray;
                 font-weight: $font-weight-normal;
                 padding-bottom: 5px;
-                padding-top: $padding-default-vertical;
+                
             }
         }
 

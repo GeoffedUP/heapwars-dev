@@ -1,0 +1,43 @@
+/*     General overwrite     */
+body,
+.wrapper{
+    max-height: 50vh;
+    position: relative;
+}
+
+i{
+    color: #e4af00;
+  
+    &:hover, &:focus{
+       color: #ffc400;
+       text-decoration: none;
+    }
+  }
+  
+a{
+  color: #000;
+  font-weight: bold;
+
+  &:hover, &:focus{
+     color: #ad2800;
+     text-decoration: none;
+  }
+}
+.gobold {
+    font-weight: 1000px;
+}
+
+.btn-hover {
+    color: #ffffff;
+    background-color: #0087ff;
+
+}
+
+
+
+.btn-hover:hover    {
+    color: #ffffff;
+    background-color: #b42a00; 
+}
+
+

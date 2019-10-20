@@ -15,6 +15,17 @@
 
  */
 
+ .btn-hover {
+    color: #ffffff;
+    background-color: #0087ff;
+}
+
+
+.btn-hover:hover    {
+    color: #ffffff;
+    background-color: #b42a00; 
+}
+
 @import "lbd/variables";
 @import "lbd/mixins";
 
@@ -46,3 +57,10 @@
 
 // Nucleo Icons
 @import "lbd/partial-nucleo-icons";
+
+//Plugins
+@import "lbd/plugins/animate";
+@import "lbd/plugins/datetime-picker";
+
+// Custom scss 0x
+@import "lbd/0xcustom"

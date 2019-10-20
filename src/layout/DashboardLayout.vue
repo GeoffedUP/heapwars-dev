@@ -15,30 +15,24 @@
         <i class="nc-icon nc-notes"></i>
         <p>Latest Winners</p>
       </sidebar-link>
-      <sidebar-link to="/typography">
+      <sidebar-link to="/heap-txns">
         <i class="nc-icon nc-paper-2"></i>
         <p>Heap Txns</p>
       </sidebar-link>
-      <sidebar-link to="/icons">
+      <sidebar-link to="/latest-txns">
         <i class="nc-icon nc-atom"></i>
         <p>Latest Txns</p>
       </sidebar-link>
-      <sidebar-link to="/maps">
+      <sidebar-link to="/awesome-shuf">
         <i class="nc-icon nc-pin-3"></i>
         <p>Awesome SHUF</p>
       </sidebar-link>
-      <sidebar-link to="/notifications">
+      <sidebar-link to="*">
         <i class="nc-icon nc-bell-55"></i>
         <p>Troll Box</p>
       </sidebar-link>
 
-      <template slot="bottom-links">
-        <sidebar-link class="active"
-                      to="/admin/upgrade">
-          <i class="nc-icon nc-alien-33"></i>
-          <p>Upgrade to PRO</p>
-        </sidebar-link>
-      </template>
+
     </side-bar>
     <div class="main-panel">
       <top-navbar></top-navbar>

@@ -20,6 +20,7 @@
             <a class="dropdown-item" href="#">Discord</a>
             <a class="dropdown-item" href="#">Reddit</a>
             <div class="divider"></div>
+            <div class="divider"></div>
             <a class="dropdown-item" href="#">Shuffle Website</a>
 
           </base-dropdown>   
@@ -112,6 +113,26 @@
 
 </script>
 <style>
+
+ .nc-planet {
+  color: #033a21;
+  font-weight: bold;
+ }
+
+ .nc-planet:hover{
+     color: #ad2800;
+     text-decoration: none;
+  }
+
+a{
+  color: #033a21;
+  font-weight: bold;
+
+  &:hover, &:focus{
+     color: #ad2800;
+     text-decoration: none;
+  }
+}
 
 .navbar {
 

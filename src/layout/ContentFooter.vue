@@ -4,13 +4,13 @@
       <nav>
         <ul class="footer-menu">
           <li>
-            <router-link :to="{path:'/'}"><font color="#b42a00"><i class="fa fa-heart heart"></i></font> Donate</router-link>
+           <router-link :to="{path:'/donate'}">Donate <i style="color: #d43200;" class="fa fa-heart heart"></i></router-link>
           </li>
         </ul>
       </nav>
-      <div class="copyright text-center">
+      <div class="copyright gobold text-center">
          Coded by
-        <a href="https://github.com/geoffedup"  target="_blank">GeoffedUP</a>.
+        <router-link :to="{path:'/github'}">GeoffedUP</router-link>
       </div>
     </div>
   </footer>
@@ -20,11 +20,6 @@
 
 </script>
 <style>
- {
-  background-color: #297a43;
-  border-width: 5px;
-  border-color: #001600
-  
-}
+
 
 </style>
