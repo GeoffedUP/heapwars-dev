@@ -27,9 +27,9 @@
           </sidebar-link>
         </slot>
       </ul>
- <!--     <ul class="nav nav-bottom" v-if="$slots['bottom-links']">
+     <ul class="nav nav-bottom" v-if="$slots['bottom-links']">
         <slot name="bottom-links"></slot>
-      </ul> -->
+      </ul> 
     </div>
   </div>
 </template>

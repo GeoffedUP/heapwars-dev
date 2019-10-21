@@ -14,14 +14,13 @@
               <base-dropdown tag="ul" title="Connect">
 
     <template slot="title"><font style="color: #001d10;"><b><i class="nc-icon nc-planet"></i></b></font><font style="color: #001d10; font-weight: bold;">  Connect $SHUF</font></template>
-            <a class="dropdown-item" href="#">Telegram</a>
-            <a class="dropdown-item" href="#">GitHub</a>
-            <a class="dropdown-item" href="#">Twitter</a>
-            <a class="dropdown-item" href="#">Discord</a>
-            <a class="dropdown-item" href="#">Reddit</a>
+            <router-link :to="{path:'/telegramshuf'}" class="dropdown-item">Telegram</router-link>
+            <router-link :to="{path:'/githubshuf'}" class="dropdown-item">GitHub</router-link>
+            <router-link :to="{path:'/twittershuf'}" class="dropdown-item">Twitter</router-link>
+            <router-link :to="{path:'/discordshuf'}" class="dropdown-item">Discord</router-link>
+            <router-link :to="{path:'/redditshuf'}" class="dropdown-item">Reddit</router-link>
             <div class="divider"></div>
-            <div class="divider"></div>
-            <a class="dropdown-item" href="#">Shuffle Website</a>
+            <router-link :to="{path:'/shufflemonster'}" class="dropdown-item">Shuffle Website</router-link>
 
           </base-dropdown>   
       

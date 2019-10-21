@@ -14,6 +14,17 @@ import BootstrapVue from 'bootstrap-vue'
 // A plugin needed to use bootstrap-vue Toast elements
 import PortalVue from 'portal-vue'
 
+// Vue2-perfect scrollbar 
+import PerfectScrollbar from 'vue2-perfect-scrollbar'
+import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
+/**
+ * Use this plugin to make scrolling component
+     <perfect-scrollbar>
+     <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+     </perfect-scrollbar>
+
+*/
+
 // asset imports
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/demo.css'
@@ -33,5 +44,6 @@ export default {
     Vue.use(BootstrapVue);
     Vue.use(PortalVue)
     Vue.use(VueScrollTo);
+    Vue.use(PerfectScrollbar)
   }
 }

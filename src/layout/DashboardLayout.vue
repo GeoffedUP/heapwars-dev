@@ -32,6 +32,14 @@
         <p>Troll Box</p>
       </sidebar-link>
 
+      <template slot="bottom-links">
+        <sidebar-link class="active"
+                      to="/uniswapshuf">
+          <i class="nc-icon nc-alien-33"></i>
+          <p>$Trade on Uniswap</p>
+        </sidebar-link>
+      </template>
+
 
     </side-bar>
     <div class="main-panel">

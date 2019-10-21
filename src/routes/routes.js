@@ -1,4 +1,5 @@
 import DashboardLayout from '../layout/DashboardLayout.vue'
+import TopNavbar from '../layout/TopNavbar.vue'
 // GeneralViews
 import NotFound from 'src/pages/NotFoundPage.vue'
 
@@ -62,32 +63,130 @@ const routes = [
     ]
   },
 
+
   // 404 Not Found page
   {
-    path: '*',
+    
     name: 'Troll Box',
+    path: '*/',
     component: NotFound
+ 
   },
-
-
+  //My github
   {
     name: 'GitHub',
-    path: '/github',
+    path: '/geoffedup',
     beforeEnter() {                    
-                  window.open("https://www.github.com/geoffedup", 
+                  window.open("http://tiny.cc/geoffedup", 
                   '_blank');
               }
   },
+
+  //Donation link
   {
     name: 'Donate',
     path: '/donate',
     beforeEnter() {                    
-                  window.open("https://etherscan.io/address/0x69696562885eb3c9a609f957efd150df93ba8c2e#tokentxns", 
+                  window.open("http://tiny.cc/donate-shuf",
                   '_blank');
               }
-  }
-]
+  },
 
+
+
+    //Social links
+
+      {
+    name: 'TelegramShuf',
+    path: '/telegramshuf',
+    component: TopNavbar,
+    beforeEnter() {
+                  window.open("http://tiny.cc/telegram-shuf", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'GitHubShuf',
+    path: '/githubshuf',
+    component: TopNavbar,
+    beforeEnter() {                    
+                  window.open("http://tiny.cc/github-shuf", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'TwitterShuf',
+    path: '/twittershuf',
+    component: TopNavbar,
+    beforeEnter() {                    
+                  window.open("http://tiny.cc/twitter-shuf", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'DiscordShuf',
+    path: '/discordshuf',
+    component: TopNavbar,
+    beforeEnter() {                    
+                  window.open("http://tiny.cc/shuffle-discord", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'RedditShuf',
+    path: '/redditshuf',
+    component: TopNavbar,
+    beforeEnter() {                    
+                  window.open("http://tiny.cc/reddit-shuf", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'Shuffle Website',
+    path: '/shufflemonster',
+    component: TopNavbar,
+    beforeEnter() {                    
+                  window.open("http://tiny.cc/shuffle-monster", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'ShuffleTokenContract',
+    path: '/shuffletokencontract',
+    component: TopNavbar,
+    beforeEnter() {                    
+                  window.open("http://tiny.cc/shuffletoken-contract", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'UniswapShuf',
+    path: '/uniswapshuf',
+    component: TopNavbar,
+    beforeEnter() {                    
+                  window.open("http://tiny.cc/uniswap-shuf", 
+                  '_blank');
+                  }
+      },
+
+      {
+    name: 'DDEXshuf',
+    path: '/ddexshuf',
+    component: TopNavbar,
+ beforeEnter() {                    
+          window.open("http://tiny.cc/ddex-shuf", 
+          '_blank');
+               }
+      }
+
+    ]
 /**
  * Asynchronously load view (Webpack Lazy loading compatible)
  * The specified component must be inside the Views folder

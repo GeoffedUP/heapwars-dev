@@ -4,8 +4,8 @@
     <div class="container-fluid">
 
 <p align="center">
- Coded by<router-link :to="{path:'/github'}"><b class="donate">  GeoffedUP </b></router-link>
-            &<router-link :to="{path:'/donate'}">  <font color="#b42a00">  <i class="fa fa-heart heart"></i></font> <b class="donate2"> Donate</b></router-link>
+ Coded by<router-link :to="{path:'/geoffedup'}"><b class="donate">  GeoffedUP </b></router-link>
+            &<router-link :to="{path:'/donate'}">  <font color="#b42a00">  <i style="color: #d43200;" class="fa fa-heart heart"></i></font> <b class="donate2"> Donate</b></router-link>
 </p>
     </div>
   </footer>
@@ -93,7 +93,7 @@
 <style>
 
 .donate2 {
-  color: #000;
+  color: #001d10;
 }
 
 .donate2:hover {

@@ -10,7 +10,7 @@
       </nav>
       <div class="copyright gobold text-center">
          Coded by
-        <router-link :to="{path:'/github'}">GeoffedUP</router-link>
+        <router-link :to="{path:'/geoffedup'}">GeoffedUP</router-link>
       </div>
     </div>
   </footer>
