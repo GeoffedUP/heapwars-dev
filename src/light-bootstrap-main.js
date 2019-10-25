@@ -13,6 +13,9 @@ import VueScrollTo from 'vue-scrollto';
 import BootstrapVue from 'bootstrap-vue'
 // A plugin needed to use bootstrap-vue Toast elements
 import PortalVue from 'portal-vue'
+// vue-sidebar-menu Plugin
+import SidebarMenu from './components/VueSidebar'
+
 
 // Vue2-perfect scrollbar 
 import PerfectScrollbar from 'vue2-perfect-scrollbar'
@@ -25,12 +28,17 @@ import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
 
 */
 
+// SidebarMenu CSS
+import './assets/css/vue-sidebar-menu.css'
+
+
 // asset imports
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/demo.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '../src/assets/css/w3.css'
 import './assets/sass/light-bootstrap-dashboard.scss'
+
 /**
  * This is the main Light Bootstrap Dashboard Vue plugin where dashboard related plugins are registerd.
  */
@@ -45,5 +53,6 @@ export default {
     Vue.use(PortalVue)
     Vue.use(VueScrollTo);
     Vue.use(PerfectScrollbar)
+    Vue.use(SidebarMenu)
   }
 }

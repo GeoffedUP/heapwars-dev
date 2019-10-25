@@ -1,15 +1,16 @@
 /*     General overwrite     */
 body,
 .wrapper{
+    background-color: #d6f0d9;
     max-height: 50vh;
     position: relative;
 }
 
 i{
-    color: #e4af00;
+    color: #ffd000;
   
     &:hover, &:focus{
-       color: #ffc400;
+       color: #ffd000;
        text-decoration: none;
     }
   }

@@ -9,7 +9,7 @@ body > .navbar-collapse{
     display: block;
     z-index: 1;
     
-    color: #000;
+    color: #fff;
     font-weight: 200;
     background-size: cover;
     background-position: center center;
@@ -22,6 +22,7 @@ body > .navbar-collapse{
         width: 260px;
         z-index: 4;
         padding-bottom: 20px;
+        border-right: 1px solid #00a00d;
     }
 
     .sidebar-background{
@@ -40,6 +41,7 @@ body > .navbar-collapse{
     .logo{
         padding: 10px 15px 9px 15px;
         border-bottom: 1px solid rgb(0, 0, 0);
+        color: #fff;
         position: relative;
         z-index: 4;
 
@@ -56,7 +58,7 @@ body > .navbar-collapse{
             text-transform: uppercase;
             padding: $padding-small-vertical $padding-zero;
             font-size: $font-size-large;
-            color: $white-color;
+            color: #fff;
             text-align: center;
             font-weight: $font-weight-normal;
             line-height: 30px;
@@ -103,16 +105,16 @@ body > .navbar-collapse{
 
         li{
             .nav-link{
-                color: $white-color;
+                color: #fff;
                 margin: 5px 15px;
                 opacity: .86;
-                color: #ffbf00;
+                color: #ffd000;
                 border-radius: 4px;
                 display: block;
                 padding: 10px 15px;
 
                 &:hover{
-                    background: #001600cb;
+                    color: #fff;
                     opacity: 1;
                 }
 
@@ -136,14 +138,26 @@ body > .navbar-collapse{
             }
 
             &:hover .nav-link{
-                background: rgba(160, 37, 0, 0.534);
+                background: #00a00d;
+                opacity: 1;
+            }
+
+            &:hover .nav-link i{
+                color: $white-color;
                 opacity: 1;
             }
 
             &.active .nav-link{
                 color: $white-color;
                 opacity: 1;
-                background: #b22900e1;
+                background: #00a00d;
+
+            }
+
+            &.active .nav-link i{
+                color: $white-color;
+                opacity: 1;
+                background: #00a00d;
 
             }
 
@@ -178,7 +192,7 @@ body > .navbar-collapse{
         }
 
         .nav-link{
-            color: $white-color;
+            color: #fff;
             margin: 5px 15px;
             opacity: .86;
             border-radius: 4px;
@@ -192,12 +206,14 @@ body > .navbar-collapse{
     .logo{
         padding: $navbar-padding-a;
         border-bottom: 0px solid #e03400;
+        background-color: #00a00d;
+
 
         p{
             float: left;
             font-size: 20px;
             margin: 10px 10px;
-            color: $white-color;
+            color: #fff;
             line-height: 20px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
@@ -208,7 +224,7 @@ body > .navbar-collapse{
             display: flex;
             align-items: center;
             font-size: $font-size-large;
-            color: $white-color;
+            color: #000000;
             text-align: center;
             font-weight: $font-weight-normal;
             line-height: 30px;
@@ -244,6 +260,10 @@ body > .navbar-collapse{
 
     &:before{
         background: #001d10;
+        // color: #ffd000;
+        // color: #00a00d;
+        // color: #d6f0d9;
+        // color: #e03400;
     }
 
     &:after{
@@ -254,7 +274,7 @@ body > .navbar-collapse{
 
     &[data-image]:after,
     &.has-image:after{
-        opacity: .77;
+        opacity: 1;
     }
 
     &[data-color="black"]:after{
@@ -282,13 +302,13 @@ body > .navbar-collapse{
 
 
 .main-panel{
-    background: #b0d1b3;
+    background: #d6f0d9;
     position: relative;
     float: right;
     height: 100%;
     width: $sidebar-width;
     border-top: 0px solid #000000;
-    border-bottom: 1px solid #192c2556;
+    border-bottom: 0px solid #192c2556;
 
     min-height: 100%;
 
@@ -303,24 +323,12 @@ body > .navbar-collapse{
     width: 100%
 }
     .bg {
-        border-top: 1px solid #2e6450;
+        border-top: 0px solid #2e6450;
         color: $default-states-color;
         background-color: #d6f0d9;
     }
     
-    .navbar{
-    width: 100%;
-        z-index: 1;
-        color: #001d10;
-    margin-bottom: 0;
-    // background-color: #001d10;
-    background-color: #d6f0d9;
-    border-width: 1px;
-    padding-bottom: 0px;
-    padding-top: 15px;
-    height: 70px;
-    border-bottom: 1px solid #033a21;
-    }
+
     
 }
 

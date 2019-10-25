@@ -1139,7 +1139,7 @@ m1397 -200 c-17 -24 -69 -156 -69 -175 0 -14 25 2 57 37 51 56 109 94 173 113
 
 
 .content {
-color: #e4af00 !important;
+color: #ffd000 !important;
 
 }
 

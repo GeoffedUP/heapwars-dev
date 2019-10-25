@@ -2,11 +2,15 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
+
+$black-color-top:	 	            #001d10;
+$black-color-bottom: 	            #001d10;
+
 $none:                       0   !default;
 $border-thin:                1px !default;
 $border-thick:               2px !default;
 
-$white-color:                #FFFFFF !default;
+$white-color:                #ffffff !default;
 $white-bg:                   #FFFFFF !default;
 
 $smoke-bg:                   #F5F5F5 !default;
@@ -216,8 +220,7 @@ $purple-color-bottom: 	            #943bea;
 $pink-color-top: 		            #ff2a63;
 $pink-color-bottom: 	            #ff2e2e;
 
-$black-color-top:	 	            #00110a;
-$black-color-bottom: 	            #00110a;
+
 
 $social-facebook: 			#3b5998;
 $social-twitter: 			#55acee;

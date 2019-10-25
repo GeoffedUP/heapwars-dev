@@ -1553,7 +1553,7 @@ padding: 10px;
 }
 
 .w3-green:hover h3 {
-    color: #eeff00 !important;
+    color: #ffd000 !important;
     weight: 800px;
     background-color: transparent,  !important;
 
@@ -1610,7 +1610,7 @@ padding: 10px;
 
 .w3-hover-green:hover {
     color: #001d10 !important;
-    background-color: #8b290b !important;
+    background-color: #00a00d !important;
 
 }
 
