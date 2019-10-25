@@ -14,7 +14,7 @@ import BootstrapVue from 'bootstrap-vue'
 // A plugin needed to use bootstrap-vue Toast elements
 import PortalVue from 'portal-vue'
 // vue-sidebar-menu Plugin
-import SidebarMenu from './components/VueSidebar'
+// import SidebarMenu from './components/VueSidebar'
 
 
 // Vue2-perfect scrollbar 
@@ -29,7 +29,7 @@ import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
 */
 
 // SidebarMenu CSS
-import './assets/css/vue-sidebar-menu.css'
+// import './assets/css/vue-sidebar-menu.css'
 
 
 // asset imports
@@ -49,10 +49,10 @@ export default {
     Vue.use(SideBar)
     Vue.use(Notifications)
     Vue.use(VTooltip)
-    Vue.use(BootstrapVue);
+    Vue.use(BootstrapVue)
     Vue.use(PortalVue)
-    Vue.use(VueScrollTo);
+    Vue.use(VueScrollTo)
     Vue.use(PerfectScrollbar)
-    Vue.use(SidebarMenu)
+    // Vue.use(SidebarMenu)
   }
 }

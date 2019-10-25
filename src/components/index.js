@@ -11,7 +11,7 @@ import StatsCard from './Cards/StatsCard.vue'
 
 import SidebarPlugin from './SidebarPlugin'
 
-import { SidebarMenu } from './VueSidebar'
+// import { SidebarMenu } from './VueSidebar'
 
 let components = {
   BaseCheckbox,
@@ -22,8 +22,8 @@ let components = {
   StatsCard,
   Table,
   BaseDropdown,
-  SidebarPlugin,
-  SidebarMenu
+  SidebarPlugin
+  // SidebarMenu
   
 }
 

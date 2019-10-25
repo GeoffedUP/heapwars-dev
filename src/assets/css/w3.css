@@ -241,7 +241,7 @@ h2 {
 
 h3 {
     font-size: 27px;
-    color: #ffffff;
+    color: #d6f0d9;
 }
 
 h4 {
@@ -1500,7 +1500,7 @@ padding: 10px;
 .w3-amber,
 .w3-hover-amber:hover {
     color: #000 !important;
-    background-color: #ffc107 !important
+    background-color: #ffe600 !important
 }
 
 .w3-aqua,
@@ -1553,7 +1553,7 @@ padding: 10px;
 }
 
 .w3-green:hover h3 {
-    color: #ffd000 !important;
+    color: #ffe600 !important;
     weight: 800px;
     background-color: transparent,  !important;
 
@@ -1754,7 +1754,7 @@ padding: 10px;
 
 .w3-text-amber,
 .w3-hover-text-amber:hover {
-    color: #ffc107 !important
+    color: #ffe600 !important
 }
 
 .w3-text-aqua,

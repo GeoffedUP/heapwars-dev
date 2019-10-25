@@ -107,14 +107,14 @@ body > .navbar-collapse{
             .nav-link{
                 color: #fff;
                 margin: 5px 15px;
-                opacity: .86;
-                color: #ffd000;
+                opacity: 1;
+                color: #ffe600;
                 border-radius: 4px;
                 display: block;
                 padding: 10px 15px;
 
                 &:hover{
-                    color: #fff;
+                    color: #d6f0d9;
                     opacity: 1;
                 }
 
@@ -145,6 +145,7 @@ body > .navbar-collapse{
             &:hover .nav-link i{
                 color: $white-color;
                 opacity: 1;
+                font-weight: bold;
             }
 
             &.active .nav-link{
@@ -158,12 +159,13 @@ body > .navbar-collapse{
                 color: $white-color;
                 opacity: 1;
                 background: #00a00d;
+                font-weight: bold;
 
             }
 
             &.separator{
                 margin: 15px 0;
-                border-bottom: 1px solid #cfa527;
+                border-bottom: 1px solid #ffe600;
 
                 & + .nav-item {
                     margin-top: 31px;
@@ -192,7 +194,7 @@ body > .navbar-collapse{
         }
 
         .nav-link{
-            color: #fff;
+            color: #d6f0d9;
             margin: 5px 15px;
             opacity: .86;
             border-radius: 4px;
@@ -213,7 +215,7 @@ body > .navbar-collapse{
             float: left;
             font-size: 20px;
             margin: 10px 10px;
-            color: #fff;
+            color: #d6f0d9;
             line-height: 20px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
