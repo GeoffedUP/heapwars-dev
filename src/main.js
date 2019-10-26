@@ -16,10 +16,13 @@ import LightBootstrap from './light-bootstrap-main'
 import routes from './routes/routes'
 
 import './registerServiceWorker'
+
+import Vuetable from 'vuetable-2'
 // plugin setup
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(LightBootstrap)
+Vue.use(Vuetable)
 
 // configure router
 const router = new VueRouter({
