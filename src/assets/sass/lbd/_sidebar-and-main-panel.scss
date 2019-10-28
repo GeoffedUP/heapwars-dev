@@ -1,3 +1,20 @@
+/*
+------------------------------------
+========IMPORTANT COLORS============
+------------------------------------
+
+ color: #001d10;
+ color: #ffe600;
+ color: #00a00d;
+ color: #d6f0d9;
+ color: #e03400;
+ 
+ ------------------------------------
+========IMPORTANT COLORS============
+------------------------------------
+ */
+
+
 .sidebar,
 body > .navbar-collapse{
     position: fixed;
@@ -9,7 +26,7 @@ body > .navbar-collapse{
     display: block;
     z-index: 1;
     
-    color: #fff;
+    color: #d6f0d9;
     font-weight: 200;
     background-size: cover;
     background-position: center center;
@@ -85,7 +102,7 @@ body > .navbar-collapse{
 
     .logo-tim{
         border-radius: 50%;
-        border: 1px solid #333;
+        border: 1px solid #fff;
         display: block;
         height: 61px;
         width: 61px;
@@ -99,19 +116,28 @@ body > .navbar-collapse{
     }
 
     .nav{
-        margin-top: 20px;
-        float: none;
+        //sidebar menu wrapper
+        margin-top: 65px; //top margin(how  much space from top)
+        float: right;
         display: block;
 
         li{
+            //sidebar nav link customization
             .nav-link{
-                color: #fff;
-                margin: 5px 15px;
+                 // menu button margin
+                margin: 5px 10px; // 1st_top/bottom & 2nd_side-left/right
+                margin-right: 70px;
+                
                 opacity: 1;
                 color: #ffe600;
-                border-radius: 4px;
+
+                 //box/rounded corners for active/hover button|+px = more rounded|-0px = squared|
+                border-radius: 2px;
                 display: block;
-                padding: 10px 15px;
+                
+                // menu button padding
+                padding: 5px 2px; // 1st_top/bottom & 2nd_side-left/right
+                
 
                 &:hover{
                     color: #d6f0d9;
@@ -207,7 +233,8 @@ body > .navbar-collapse{
 
     .logo{
         padding: $navbar-padding-a;
-        border-bottom: 0px solid #e03400;
+        border-bottom: 1px solid #001d10;
+        // border-bottom: 1px solid #e03400;
         background-color: #00a00d;
 
 
@@ -262,7 +289,7 @@ body > .navbar-collapse{
 
     &:before{
         background: #001d10;
-        // color: #ffd000;
+        // color: #ffe600;
         // color: #00a00d;
         // color: #d6f0d9;
         // color: #e03400;

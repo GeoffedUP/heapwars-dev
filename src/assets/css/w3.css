@@ -241,7 +241,6 @@ h2 {
 
 h3 {
     font-size: 27px;
-    color: #d6f0d9;
 }
 
 h4 {
@@ -263,14 +262,21 @@ h6 {
 h1,
 h2,
 h4,
-h5,
 h6 {
     font-family: "Poppins", sans-serif !important;
     font-weight: 600;
     margin: 10px 0
 }
 
+h5 {
+    color: #ffe600 !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 600;
+    margin: 10px 0
+}
+
 h3 {
+    color: #ffe600 !important;
     font-family: "Poppins", sans-serif !important;
     font-weight: 600;
     margin: 10px 0
@@ -1547,22 +1553,18 @@ padding: 10px;
 }
 
 .w3-green:hover h6 {
-    color: #c6e2cd !important;
+    color: #d6f0d9 !important;
     background-color: transparent,  !important;
 
 }
 
+
 .w3-green:hover h3 {
-    color: #ffe600 !important;
+    color: #d6f0d9 !important;
     weight: 800px;
     background-color: transparent,  !important;
 
 }
-
-/* .icon {
-    fill: #ffd000; 
- } */
-
 
 .w3-green svg {
     height: 70px;
@@ -1573,23 +1575,58 @@ padding: 10px;
     color: #d6f0d9;
 }
 
-
-
 .w3-green svg path {
     weight: bold;
     fill: currentcolor;
 }
 
-.w3-green2 svg:hover {
-    color: #c6e2cd;
+/*
+====== w3-green3 ===========
+*/
+
+.w3-green3 {
+    background-color: #003f0e;
+    height: 100%;
+}
+
+.w3-green3:hover h6 {
+    color: #d6f0d9 !important;
+    background-color: transparent,  !important;
+
+}
+
+.w3-green3:hover h5 {
+    color: #ffe600 !important;
+    weight: 800px;
+    background-color: transparent,  !important;
+
+}
+
+.w3-green3 svg {
+    height: 70px;
+    width: auto;
+    display: inline;
+}
+.w3-green3:hover svg {
+    color: #d6f0d9;
+}
+
+.w3-green3 svg path {
     weight: bold;
-    fill: #c6e2cd;
+    fill: currentcolor;
+}
+
+
+.w3-green2 svg:hover {
+    color: #d6f0d9;
+    weight: bold;
+    fill: #d6f0d9;
 }
 
 .w3-green2 svg:hover path {
-    color: #c6e2cd;
+    color: #d6f0d9;
     weight: bold;
-    fill: #c6e2cd;
+    fill: #d6f0d9;
 }
 
 .w3-green2 th {

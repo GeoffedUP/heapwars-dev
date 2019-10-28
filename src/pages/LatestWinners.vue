@@ -1,163 +1,40 @@
 <template>
-  <div class="content">
-    <div class="container-fluid">
+    <div class="content">
+   <div class="w3-row-padding">
+      <div class="w3-hover-shadow">
+        <div class="w3-container w3-card-4 w3-green3 w3-round w3-padding-16">
+
+<b-table-simple hover small caption-top responsive>
+    <caption>Latest Winners</caption>
+        <b-thead head-variant="dark">
+        </b-thead>
+    <b-tbody>
+      <b-tr>
+        <b-th><h5>Address</h5></b-th>
+        <b-th class="text-right"><h5>Amount</h5></b-th>
+        <b-th class="text-right"><h5>Block</h5></b-th>
+      </b-tr>
+       <b-tr class="w3-hover-green" v-on:click="click_winner(item)" v-for="item in winners" v-bind:key="item.wintx">
+       <b-td><font size="3"><font color="#00d812">Winner!</font></font><br><span><b><font color="#c6e2cd" size="3">{{ item.winaddress }}</font></b></span></b-td>
+        <b-td class="text-right"><b><font color="#ffe600">{{ item.winamount }} SHUF</font></b></b-td>
+        <b-td class="text-right"><b><font color="#ffffff">{{ item.winblock }}</font></b></b-td>
+      </b-tr>
+          </b-tbody>
+    <b-tfoot>
+      <b-tr>
+        <b-td colspan="2" class="text-right">
+          Total: <b>512</b>
+        </b-td>
+      </b-tr>
+    </b-tfoot>
+  </b-table-simple>
 
 
-
-
-    <div class="w3-row-padding">
-
-      <div class="top-2 w3-half w3-margin-bottom">
-        <div class="w3-badge">
-           <table class="w3-table-all w3-hoverable w3-green2 w3-card-4">
-            <tbody>
-              <tr>
-    <th colspan="3"><h4 align="center">Shuffle Transactions</h4></th>
-  </tr>
-    <tr class="w3-hoverable">
-    <th>Address</th>
-    <th>Amount</th>
-    <th>Block</th>
-  </tr>
-  </tbody>
-  <tbody class="w3-hoverable">
-     <tr class="w3-hover-green" v-on:click="click_transfer(item)" v-for="item in transfers" v-bind:key="item.tx">
-      <td>From:<span><b><font color="#ccc" size="3">{{ item.address_short }}</font></b></span><br> To: <span><b><font color="#ccc" size="3">{{ item.address_short2 }}</font></b></span></td>
-       <td><b><font color="#fffb00">{{ item.amount }} SHUF</font></b></td>
-       <td><b><font color="#ffffff">{{ item.block }}</font></b></td>
-       </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-<div class="top-2 w3-half w3-margin-bottom">
-        <div class="w3-badge">
-           <table class="w3-table-all w3-hoverable w3-green2 w3-card-4">
-            <tbody>
-              <tr>
-    <th colspan="3"><h4 align="center">Shuffle Winners</h4></th>
-  </tr>
-                <tr class="w3-hoverable">
-    <th>Address</th>
-    <th>Amount</th>
-    <th>Block</th>
-  </tr>
-  </tbody>
-  <tbody class="w3-hoverable">
-                <tr class="w3-hover-green" v-on:click="click_winner(item)" v-for="item in winners" v-bind:key="item.wintx">
-
-      <td><font size="3">Winner!</font><br><span><b><font color="#ccc" size="3">{{ item.winaddress_short }}</font></b></span></td>
-       <td><b><font color="#fffb00">{{ item.winamount }} SHUF</font></b></td>
-       <td><b><font color="#ffffff">{{ item.winblock }}</font></b></td>
-       </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-
-        <div class="w3-row-padding">
-
-<div class="top-2 w3-half w3-margin-bottom">
-        <div class="w3-badge">   
-           <table class="w3-table-all w3-hoverable w3-green2 w3-card-4">
-            <tbody>
-              <tr>
-    <th colspan="4">
-    <h4 align="center">Joined The Heap</h4></th>
-  </tr>
-   <tr class="w3-hoverable">
-    <th></th>
-    <th></th>
-    <th>BlockNo:</th>
-  </tr>
-  </tbody>
-  <tbody class="w3-hoverable">
-  <tr class="w3-hover-green" v-on:click="click_joinheap(item)" v-for="item in joinheap" v-bind:key="item.jointx">
-      <td><span><b><font color="#ccc" size="3">{{ item.joinaddress_short }}</font></b> Has joined</span></td> 
-      <td><span> With: <b><font color="#fffb00">{{ item.joincurrent }} SHUF</font></b></span></td>
-      <td><b><font color="#ffffff">{{ item.joinblock }}</font></b></td>
-       </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-<div class="top-2 w3-half w3-margin-bottom">
-        <div class="w3-badge">
-           <table class="w3-table-all w3-hoverable w3-green2 w3-card-4">
-            <tbody>
-              <tr>
-    <th colspan="4">
-    <h4 align="center">Fallen off the Heap</h4></th>
-  </tr>
-   <tr class="w3-hoverable">
-    <th></th>
-    <th></th>
-    <th>BlockNo:</th>
-  </tr>
-  </tbody>
-  <tbody class="w3-hoverable">
-    <tr class="w3-hover-green" v-on:click="click_leaveheap(item)" v-for="item in leaveheap" v-bind:key="item.leavetx">
-      <td><span><b><font color="#ccc" size="3">{{ item.leaveaddress_short }}</font></b> Has left</span></td> 
-      <td><span> With: <b><font color="#fffb00">{{ item.leavecurrent }} SHUF</font></b></span></td>
-      <td><b><font color="#ffffff">{{ item.leaveblock }}</font></b></td>
-       </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-<div class="w3-row-padding">
-
-      <div class="top-2 w3-margin-bottom">
-  <div class="w3-badge">
-<table class="w3-table-all w3-hoverable w3-green2 w3-card-4">
-            <tbody>
-              <tr>
-    <th colspan="2">
-    
-    
-    <h4 align="center">RawHeap</h4></th>
-  </tr>
-                    <tr class="w3-hoverable">
-
-    <th>Address</th>
-    <th>Amount</th>
-  </tr>
-
-  </tbody>
-  <tbody class="w3-hoverable">
-                <tr class="w3-hover-green" v-for="item in fullHeap" v-bind:key="item.address">
-
-      <td><span><b><font color="#ccc" size="3">{{ item.heapaddress }}</font></b></span></td> 
-      <td><span> With: <b><font color="#fffb00">{{ item.heapbalance }} SHUF</font></b></span></td>
-       </tr>
-            </tbody>
-          </table>
-          </div>
-          </div>
-        </div>
-
-
-
-    </div>
+       </div>
+     </div>
+    </div> 
   </div>
 </template>
-
-
-
 
 <script>
 
@@ -166,6 +43,7 @@
   import { readWeb3, getToken, getHeap } from '../web3.js';
   import env  from '../env.js';
   import { aggregate } from '@makerdao/multicall';
+  import { TablePlugin } from 'bootstrap-vue'
 
 
   function shortAddress(from) {
@@ -193,94 +71,18 @@ function formatAmount(amount, maxDigits = 6)  {
 
     data: function() {
     return {
-        transfers: this.transfers,
-        winners: this.winners,
-        joinheap: this.joinheap,
-        leaveheap: this.leaveheap,
-        fullHeap: this.fullHeap
+        winners: this.winners
     }
   },
 
   methods:{
-      click_transfer: function(item) {
-        var redirectWindow = window.open(`https://etherscan.io/tx/${item.tx}`, '_blank');
-        redirectWindow.location;
-      },
-
       click_winner: function(item) {
         var redirectWindow = window.open(`https://etherscan.io/tx/${item.wintx}`, '_blank');
         redirectWindow.location;
       },
-
-            click_joinheap: function(item) {
-        var redirectWindow = window.open(`https://etherscan.io/token/0x3a9fff453d50d4ac52a6890647b823379ba36b9e?a=${item.joinaddress}`, '_blank');
-        redirectWindow.location;
-      },
-      
-            click_leaveheap: function(item) {
-        var redirectWindow = window.open(`https://etherscan.io/token/0x3a9fff453d50d4ac52a6890647b823379ba36b9e?a=${item.leaveaddress}`, '_blank');
-        redirectWindow.location;
-      },
   },
 
-      created: async function() {
-      // Demostration
-      // how to load all heap positions at once
-      const heapContract = getHeap(readWeb3());
-      const heapSize = parseInt(await heapContract.methods.topSize().call());
-      const multicallConfig = { multicallAddress: '0xeefba1e63905ef1d7acba5a8513c70307c1ce441', rpcUrl: env.ethNode, };
-
-      // Create watcher
-      const rawResult = await aggregate(
-        [...Array(heapSize).keys()].map((v) => { return {
-          target: heapContract.address,
-          call: ['entry(uint256)(address,uint256)', v],
-          returns: [
-            [`EA_${v}`],
-            [`EB_${v}`]
-          ]
-        }}),
-        multicallConfig
-      );
-
-      const result = [...Array(heapSize).keys()].map((v) => { return {
-        address: rawResult.results[`EA_${v}`],
-        balance: rawResult.results[`EB_${v}`]
-      }});
-
-      console.log(result);
-      // End Demostration
-
-
-  this.fullHeap = [...Array(heapSize).keys()].map((v) => { return {
-      heapaddress: rawResult.results[`EA_${v}`],
-      heapaddress_short: shortAddress(rawResult.results[`EA_${v}`]),
-      heapbalance: formatAmount(parseFloat(rawResult.results[`EB_${v}`].toString()) / 10 ** 18)
-      }
-    }
-  );
-  this.transfers = [];
-    const reparter = getToken(readWeb3());
-        reparter.events.Transfer({
-            fromBlock: 8617285
-        },
-        (error, event) => {
-            if (this.transfers.length > 15) {
-                this.transfers.pop();
-            }
-            if (event) {
-                this.transfers.unshift({
-                    address: event.returnValues._from,
-                    address2: event.returnValues._to,
-                    address_short: shortAddress(event.returnValues._from),
-                    address_short2: shortAddress(event.returnValues._to),
-                    amount: formatAmount(parseFloat(event.returnValues._value.toString()) / 10 ** 18),
-                    tx: event.transactionHash,
-                    block: event.blockNumber
-                });
-            }
-        }
-    );
+created: async function() {
     this.winners = [];
     const reparter2 = getToken(readWeb3());
     reparter2.events.Winner({
@@ -301,53 +103,8 @@ function formatAmount(amount, maxDigits = 6)  {
             }
         }
     );
-
-    this.joinheap = [];
-    const reparter3 = getHeap(readWeb3());
-    reparter3.events.JoinHeap({
-            fromBlock: 8617285
-        },
-         (error, event) => {
-            if (this.joinheap.length > 20) {
-                this.joinheap.pop();
-            }
-            if (event) {
-                this.joinheap.unshift({
-                    joinaddress: event.returnValues._address,
-                    joinaddress_short: shortAddress(event.returnValues._address),
-                    joincurrent: formatAmount(parseFloat(event.returnValues._balance.toString()) / 10 ** 18),
-                    joinprev: event.returnValues._prevSize,
-                    jointx: event.transactionHash,
-                    joinblock: event.blockNumber
-                });
-            }
-        }
-    );
-
-        this.leaveheap = [];
-    const reparter4 = getHeap(readWeb3());
-    reparter4.events.LeaveHeap({
-            fromBlock: 8617285
-        },
-         (error, event) => {
-            if (this.leaveheap.length > 20) {
-                this.leaveheap.pop();
-            }
-            if (event) {
-                this.leaveheap.unshift({
-                    leaveaddress: event.returnValues._address,
-                    leaveaddress_short: shortAddress(event.returnValues._address),
-                    leavecurrent: formatAmount(parseFloat(event.returnValues._balance.toString()) / 10 ** 18),
-                    leaveprev: event.returnValues._prevSize,
-                    leavetx: event.transactionHash,
-                    leaveblock: event.blockNumber
-                });
-            }
-        }
-    );
   }
-}
-
+  }
 </script>
 
 

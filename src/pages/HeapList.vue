@@ -1,57 +1,39 @@
 <template>
-  <div class="content">
+    <div class="content">
+   <div class="w3-row-padding">
+      <div class="w3-hover-shadow">
+        <div class="w3-container w3-card-4 w3-green3 w3-round w3-padding-16">
+
+<b-table-simple hover small caption-top responsive>
+    <caption>Full Heap List</caption>
+        <b-thead head-variant="dark">
+        </b-thead>
+    <b-tbody>
+      <b-tr>
+        <b-th><h5>Address</h5></b-th>
+        <b-th class="text-right"><h5>Amount</h5></b-th>
+      </b-tr>
+       <b-tr class="w3-hover-green" v-for="item in fullHeap" v-bind:key="item.address">
+        <b-td><b><font color="#c6e2cd" size="3">{{ item.heapaddress }}</font></b></b-td>
+        <b-td class="text-right"><font color="#c6e2cd"></font><b><font color="#fffb00">{{ item.heapbalance }} SHUF</font></b></b-td>
+      </b-tr>
+          </b-tbody>
+    <b-tfoot>
+      <b-tr>
+        <b-td colspan="2" class="text-right">
+          Total: <b>512</b>
+        </b-td>
+      </b-tr>
+    </b-tfoot>
+  </b-table-simple>
 
 
-
-<div class="w3-row-padding">
-
-      <div class="top-2 w3-margin-bottom">
-  <div class="w3-badge">
-
-<!--
-<table class="w3-table-all w3-hoverable w3-green2 w3-card-4">
-            <tbody>
-              <tr>
-    <th colspan="2">
-    
-    
-    <h4 align="center">RawHeap</h4></th>
-  </tr>
-                    <tr class="w3-hoverable">
-
-    <th>Address</th>
-    <th>Amount</th>
-  </tr>
-
-  </tbody>
-  <tbody class="w3-hoverable">
-                <tr class="w3-hover-green" v-for="item in fullHeap" v-bind:key="item.address">
-
-      <td><span><b><font color="#ccc" size="3">{{ item.heapaddress }}</font></b></span></td> 
-      <td><span> With: <b><font color="#fffb00">{{ item.heapbalance }} SHUF</font></b></span></td>
-       </tr>
-             </tbody>
-          </table>
--->
-
-
-
-
-
-
-
-        </div>
+       </div>
      </div>
+    </div> 
   </div>
 
-
-
-   
-  </div>
 </template>
-
-
-
 
 <script>
 
@@ -60,6 +42,7 @@
   import { readWeb3, getToken, getHeap } from '../web3.js';
   import env  from '../env.js';
   import { aggregate } from '@makerdao/multicall';
+  import { TablePlugin } from 'bootstrap-vue'
 
 
   function shortAddress(from) {
@@ -96,20 +79,7 @@ function formatAmount(amount, maxDigits = 6)  {
   },
 
   methods:{
-      // click_transfer: function(item) {
-      //   var redirectWindow = window.open(`https://etherscan.io/tx/${item.tx}`, '_blank');
-      //   redirectWindow.location;
-      // },
 
-      // click_winner: function(item) {
-      //   var redirectWindow = window.open(`https://etherscan.io/tx/${item.wintx}`, '_blank');
-      //   redirectWindow.location;
-      // },
-
-      //       click_joinheap: function(item) {
-      //   var redirectWindow = window.open(`https://etherscan.io/token/0x3a9fff453d50d4ac52a6890647b823379ba36b9e?a=${item.joinaddress}`, '_blank');
-      //   redirectWindow.location;
-      // },
       
             click_leaveheap: function(item) {
         var redirectWindow = window.open(`https://etherscan.io/token/0x3a9fff453d50d4ac52a6890647b823379ba36b9e?a=${item.leaveaddress}`, '_blank');
@@ -153,94 +123,7 @@ function formatAmount(amount, maxDigits = 6)  {
       }
     }
   );
-
-  // this.transfers = [];
-  //   const reparter = getToken(readWeb3());
-  //       reparter.events.Transfer({
-  //           fromBlock: 8617285
-  //       },
-  //       (error, event) => {
-  //           if (this.transfers.length > 15) {
-  //               this.transfers.pop();
-  //           }
-  //           if (event) {
-  //               this.transfers.unshift({
-  //                   address: event.returnValues._from,
-  //                   address2: event.returnValues._to,
-  //                   address_short: shortAddress(event.returnValues._from),
-  //                   address_short2: shortAddress(event.returnValues._to),
-  //                   amount: formatAmount(parseFloat(event.returnValues._value.toString()) / 10 ** 18),
-  //                   tx: event.transactionHash,
-  //                   block: event.blockNumber
-  //               });
-  //           }
-  //       }
-  //   );
-  //   this.winners = [];
-  //   const reparter2 = getToken(readWeb3());
-  //   reparter2.events.Winner({
-  //           fromBlock: 8617285
-  //       },
-  //        (error, event) => {
-  //           if (this.winners.length > 15) {
-  //               this.winners.pop();
-  //           }
-  //           if (event) {
-  //               this.winners.unshift({
-  //                   winaddress: event.returnValues._addr,
-  //                   winaddress_short: shortAddress(event.returnValues._addr),
-  //                   winamount: formatAmount(parseFloat(event.returnValues._value.toString()) / 10 ** 18),
-  //                   wintx: event.transactionHash,
-  //                   winblock: event.blockNumber
-  //               });
-  //           }
-  //       }
-  //   );
-
-  //   this.joinheap = [];
-  //   const reparter3 = getHeap(readWeb3());
-  //   reparter3.events.JoinHeap({
-  //           fromBlock: 8617285
-  //       },
-  //        (error, event) => {
-  //           if (this.joinheap.length > 20) {
-  //               this.joinheap.pop();
-  //           }
-  //           if (event) {
-  //               this.joinheap.unshift({
-  //                   joinaddress: event.returnValues._address,
-  //                   joinaddress_short: shortAddress(event.returnValues._address),
-  //                   joincurrent: formatAmount(parseFloat(event.returnValues._balance.toString()) / 10 ** 18),
-  //                   joinprev: event.returnValues._prevSize,
-  //                   jointx: event.transactionHash,
-  //                   joinblock: event.blockNumber
-  //               });
-  //           }
-  //       }
-  //   );
-
-    //     this.leaveheap = [];
-    // const reparter4 = getHeap(readWeb3());
-    // reparter4.events.LeaveHeap({
-    //         fromBlock: 8617285
-    //     },
-    //      (error, event) => {
-    //         if (this.leaveheap.length > 20) {
-    //             this.leaveheap.pop();
-    //         }
-    //         if (event) {
-    //             this.leaveheap.unshift({
-    //                 leaveaddress: event.returnValues._address,
-    //                 leaveaddress_short: shortAddress(event.returnValues._address),
-    //                 leavecurrent: formatAmount(parseFloat(event.returnValues._balance.toString()) / 10 ** 18),
-    //                 leaveprev: event.returnValues._prevSize,
-    //                 leavetx: event.transactionHash,
-    //                 leaveblock: event.blockNumber
-    //             });
-    //         }
-    //     }
-    // );
-  }
+ }
 }
 
 </script>
@@ -252,9 +135,11 @@ function formatAmount(amount, maxDigits = 6)  {
 
 
 
-/* Hot it works? */
 .container{
     width: auto;
+}
+.w3-green {
+
 }
 .my-auto{
     margin-top: auto;
